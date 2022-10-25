@@ -9,17 +9,10 @@ window.onload = function () {
   const flex = document.querySelector(".flex");
   const text = document.querySelector(".text");
 
-  input.addEventListener("keyup", numKey);
   push.addEventListener("click", countDown);
 
-  let countNum;
-
-  function numKey(e) {
-    countNum = e.key;
-  }
-
   function countDown(n) {
-    n = countNum;
+    n = input.value;
     flex.style.display = "none";
     text.style.display = "none";
     const textCount = document.createElement("p");
